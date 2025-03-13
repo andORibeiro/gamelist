@@ -4,19 +4,39 @@ import org.springframework.beans.BeanUtils;
 
 import com.dev.gamelist.entities.Game;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 /*
  * Patterning, Service returns DTO not entities
  * */
 public class GameDTO {
+	@Schema(description = "Game's ID", example = "4")
 	private Long id;
+
+	@Schema(description = "Game's title", example = "Super Mario")
 	private String title;
+
+	@Schema(description = "Game's year of release", example = "2025")
 	private Integer year;
+
+	@Schema(description = "Game's genre", example = "Platformer")
 	private String genre;
+
+	@Schema(description = "List of platforms the game is available on", example = "Nintendo Switch, PlayStation 5, PC")
 	private String platforms;
+
+	@Schema(description = "Game's score or rating", example = "9.5")
 	private Double score;
+
+	@Schema(description = "URL of game cover image", example = "https://superMarioCoverSample.com/fakeurl.png")
 	private String imgUrl;
+
+	@Schema(description = "Short description of the game", example = "Super Mario is a classic platformer game series featuring Mario, a plumber who embarks on adventures to rescue Princess Peach from Bowser.")
 	private String shortDescription;
+
+	@Schema(description = "Long description of the game", example = "Super Mario is a series of platform games developed by Nintendo. Players control Mario, who must navigate through various levels to save Princess Peach from Bowser. The series is known for its bright, colorful visuals and innovative gameplay mechanics.")
 	private String longDescription;
+
 	
 	public GameDTO() {
 		

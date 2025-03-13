@@ -36,9 +36,7 @@ public class GameListService {
 		int min = sourceIndex < destinationIndex ? sourceIndex : destinationIndex; //define the indexes that will be update on db
 		int max = sourceIndex < destinationIndex ? destinationIndex : sourceIndex;
 		
-		for(int i = min; i <= max; i++) {
-			gameListRepository.updateBelongingPosition(listId, list.get(i).getId(), i);
-		}
+		for(int i = min; i <= max; i++) {}
 	}
 
 }

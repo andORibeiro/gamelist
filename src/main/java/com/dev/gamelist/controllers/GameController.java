@@ -12,8 +12,11 @@ import com.dev.gamelist.dto.GameDTO;
 import com.dev.gamelist.dto.GameMinDTO;
 import com.dev.gamelist.services.GameService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping(value = "/games")
+@Tag(name = "Game", description = "Endpoints to search by game")
 public class GameController {
 	
 	@Autowired
